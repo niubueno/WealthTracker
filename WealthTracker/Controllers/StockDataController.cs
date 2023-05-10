@@ -26,8 +26,8 @@ namespace WealthTracker.Controllers
         [HttpPost]
         public async Task<IActionResult> GetStockData([FromForm] Stock stock)
         {
-            var price = await _yahooFinanceApi.GetStockPrice(stock.Symbol);
-            stock.CurrentPrice = price.ToString();
+            var price = await _yahooFinanceApi.GetStockPrice(stock.CompanySymbol);
+            stock.CurrentPrice = ((float)price);
             ViewBag.Quote = price;
 
             return View("Index", stock);

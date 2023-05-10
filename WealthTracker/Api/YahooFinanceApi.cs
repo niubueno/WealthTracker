@@ -29,12 +29,12 @@ namespace WealthTracker.Api
 
         private class YahooFinanceResult
         {
-            public YahooFinanceQuoteResponse QuoteResponse { get; set; }
+            public YahooFinanceQuoteResponse? QuoteResponse { get; set; }
         }
 
         private class YahooFinanceQuoteResponse
         {
-            public List<YahooFinanceQuote> Result { get; set; }
+            public List<YahooFinanceQuote>? Result { get; set; }
         }
 
         public class YahooFinanceQuote
